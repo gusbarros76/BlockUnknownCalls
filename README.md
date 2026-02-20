@@ -97,11 +97,12 @@ On first launch: grant Contacts and Phone permissions, then set the app as your 
 - [x] GitHub Actions CI/CD
 
 **Phase 2 — In Progress**
-- [ ] Room Database (call history + analytics)
-- [ ] Manual whitelist / blacklist
+- [x] Room Database (call history)
+- [x] Blocked calls counter (HomeScreen)
+- [x] Unit tests (PhoneNumberNormalizer, ValidateContactUseCase, RecordBlockedCallUseCase)
+- [x] Detekt static analysis
 - [ ] Block notifications
-- [ ] Unit tests (80% coverage target)
-- [ ] Detekt + ktlint
+- [ ] Manual whitelist / blacklist
 
 ---
 
