@@ -137,7 +137,7 @@ if "$cygwin" || "$msys" ; then
 fi
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+DEFAULT_JVM_OPTS=''
 
 # Stop when "xargs" is not available.
 if ! command -v xargs >/dev/null 2>&1
