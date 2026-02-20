@@ -70,7 +70,4 @@ class OnboardingViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-    companion object {
-        private const val TAG = "OnboardingViewModel"
-    }
 }

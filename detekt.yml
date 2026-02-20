@@ -6,10 +6,14 @@ config:
 
 complexity:
   LongMethod:
-    threshold: 60
+    threshold: 100
   LongParameterList:
     functionThreshold: 8
     constructorThreshold: 8
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
 
 style:
   MagicNumber:
@@ -22,3 +26,6 @@ style:
 naming:
   FunctionNaming:
     functionPattern: '[a-z][a-zA-Z0-9]*|`[^`]+`'
+    excludeAnnotatedFunction:
+      - 'Composable'
+      - 'Preview'

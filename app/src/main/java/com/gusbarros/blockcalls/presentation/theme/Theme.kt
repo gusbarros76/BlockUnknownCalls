@@ -1,6 +1,5 @@
 package com.gusbarros.blockcalls.presentation.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -20,7 +19,6 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun BlockUnknownCallsTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     // MVP: apenas tema claro
