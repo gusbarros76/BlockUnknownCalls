@@ -79,6 +79,26 @@ fun HomeScreen(
                 }
             }
 
+            // Card de Contador
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 24.dp, vertical = 20.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "Calls Blocked",
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                    Text(
+                        text = state.blockedCount.toString(),
+                        style = MaterialTheme.typography.displaySmall
+                    )
+                }
+            }
+
             // Card de Informações
             Card(
                 modifier = Modifier.fillMaxWidth()
