@@ -25,7 +25,5 @@ style:
 
 naming:
   FunctionNaming:
-    functionPattern: '[a-z][a-zA-Z0-9]*|`[^`]+`'
-    excludeAnnotatedFunction:
-      - 'Composable'
-      - 'Preview'
+    # Allow PascalCase for Composable functions (Android convention)
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*|`[^`]+`'
