@@ -3,6 +3,7 @@ package com.gusbarros.blockcalls.data.service
 import android.telecom.Call
 import android.telecom.CallScreeningService
 import android.util.Log
+import com.gusbarros.blockcalls.domain.usecase.RecordBlockedCallUseCase
 import com.gusbarros.blockcalls.domain.usecase.ValidateContactUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -20,6 +21,7 @@ import org.koin.android.ext.android.inject
 class CallScreeningServiceImpl : CallScreeningService() {
 
     private val validateContactUseCase: ValidateContactUseCase by inject()
+    private val recordBlockedCallUseCase: RecordBlockedCallUseCase by inject()
 
     // SupervisorJob garante que erros em coroutines não crashem o service
     private val serviceScope = CoroutineScope(SupervisorJob())
@@ -56,6 +58,7 @@ class CallScreeningServiceImpl : CallScreeningService() {
                     } else {
                         // Número desconhecido - bloquear chamada
                         Log.d(TAG, "Unknown number - blocking call")
+                        recordBlockedCallUseCase()
                         CallResponse.Builder()
                             .setDisallowCall(true)
                             .setRejectCall(true)
